@@ -1,7 +1,7 @@
 import requests
 import os
 from zipfile import ZipFile
-import shutil
+
 
 download_uris = [
     'https://divvy-tripdata.s3.amazonaws.com/Divvy_Trips_2018_Q4.zip',
@@ -15,7 +15,6 @@ download_uris = [
 
 
 def main():
-    # your code here
     cwd = os.getcwd()
     new_directory='downloads'
     save_path=os.path.join(cwd,new_directory)
