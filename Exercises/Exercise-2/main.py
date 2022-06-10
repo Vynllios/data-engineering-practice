@@ -17,11 +17,8 @@ def main():
     df=pd.read_csv(csv_url,header=0)
     value=df['HourlyDryBulbTemperature'].max()
     result_df=df.loc[df['HourlyDryBulbTemperature']==value]
-    print('\nResult dataframe :\n',
-          result_df)
-
+    print('\nResult dataframe :\n',result_df)
     pass
-
 
 if __name__ == '__main__':
     main()
