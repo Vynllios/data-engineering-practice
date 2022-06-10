@@ -5,7 +5,7 @@ def connect():
     host = 'localhost'
     database = 'test'
     user = 'postgres'
-    pas = 'eS093789'
+    pas = '*****'
     conn = psycopg2.connect(host=host, database=database, user=user, password=pas)
     try:
         cur = conn.cursor()

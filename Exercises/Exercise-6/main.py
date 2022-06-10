@@ -30,7 +30,7 @@ def main():
     q1=spark.sql("SELECT DATE(start_time) as Day,AVG(tripduration) FROM trips GROUP BY Day ORDER BY  Day")
     q1.show()
     question1_path=os.path.join(csv_path,'question1.csv')
-    #q1.write.option("header", "true").csv(question1_path)
+    q1.write.option("header", "true").csv(question1_path)
     q2=spark.sql("SELECT COUNT(trip_id),DATE(start_time) as Day FROM trips GROUP BY Day ORDER BY Day")
     q2.show()
     # q2.write.option("header", "true").csv(question2_path)
